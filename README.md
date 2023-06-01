@@ -67,7 +67,7 @@ Users can view the complete history of note revisions, including content differe
 3. **Print Notes**: Users can print notes directly from the platform.
 
 ## Screenshots
-![image](https://github.com/sonichen/CloudNote/assets/57282299/b73d188b-e7ef-49f8-a0a1-c40e6f2fb91b)
+
 <img width="416" alt="image" src="https://github.com/sonichen/CloudNote/assets/57282299/1e64d093-ab6d-4cf6-b1ee-96db2ea20f8f">
 <img width="415" alt="image" src="https://github.com/sonichen/CloudNote/assets/57282299/4893e21e-e8f9-4faa-be0f-135d2dc39ea7">
 <img width="415" alt="image" src="https://github.com/sonichen/CloudNote/assets/57282299/987fbd64-6edb-4f9e-923e-c77ebcf0dc53">
