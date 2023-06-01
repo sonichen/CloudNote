@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cyj.mapper.ShareMapper">
+
+        <!-- 通用查询映射结果 -->
+        <resultMap id="BaseResultMap" type="com.cyj.pojo.Share">
+                    <id column="id" property="id"/>
+                    <result column="contentId" property="contentId"/>
+                    <result column="userId" property="userId"/>
+                    <result column="linkId" property="linkId"/>
+                    <result column="allowComment" property="allowComment"/>
+                    <result column="locked" property="locked"/>
+                    <result column="password" property="password"/>
+                    <result column="create_time" property="createTime"/>
+                    <result column="qrcode" property="qrcode"></result>
+        </resultMap>
+
+        <!-- 通用查询结果列 -->
+        <sql id="Base_Column_List">
+            id, contentId, userId, linkId, allowComment, locked, password, create_time,qrcode
+        </sql>
+
+</mapper>

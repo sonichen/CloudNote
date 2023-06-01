@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cyj.mapper.TagMapper">
+
+        <!-- 通用查询映射结果 -->
+        <resultMap id="BaseResultMap" type="com.cyj.pojo.Tag">
+                    <id column="id" property="id"/>
+                    <result column="tagsName" property="tagsName"/>
+                    <result column="contentId" property="contentId"/>
+                    <result column="userId" property="userId"></result>
+        </resultMap>
+
+        <!-- 通用查询结果列 -->
+        <sql id="Base_Column_List">
+            id, tagsName, contentId,userId
+        </sql>
+    <select id="queryTagsList" parameterType="long" resultType="com.cyj.pojo.Tag">
+        SELECT * FROM `tag` WHERE `tag`.`contentId`=#{contentId}
+    </select>
+<!--    通过tag的id查询文章id集合-->
+    <select id="queryContentsByTag" parameterType="long" resultType="com.cyj.pojo.Tag">
+        SELECT * FROM `tag` WHERE `tag`.`id`=#{id}
+    </select>
+
+</mapper>

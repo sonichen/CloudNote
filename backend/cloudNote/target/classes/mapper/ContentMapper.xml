@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cyj.mapper.ContentMapper">
+
+        <!-- 通用查询映射结果 -->
+        <resultMap id="BaseResultMap" type="com.cyj.pojo.Content">
+                    <id column="id" property="id"/>
+                    <result column="title" property="title"/>
+                    <result column="content" property="content"/>
+                    <result column="create_time" property="createTime"/>
+                    <result column="update_time" property="updateTime"/>
+                    <result column="userId" property="userId"/>
+                    <result column="deleted" property="deleted"/>
+                    <result column="version" property="version"/>
+                    <result column="star" property="star"/>
+                    <result column="categoriesId" property="categoriesId"/>
+                    <result column="mode" property="mode"></result>
+                    <result column="type" property="type"></result>
+        </resultMap>
+
+        <!-- 通用查询结果列 -->
+        <sql id="Base_Column_List">
+            id, title, content, create_time, update_time, userId, deleted, version, star, categoriesId,mode,type
+        </sql>
+
+    <select id="queryContent" resultType="com.cyj.dto.content.AddContentDto" parameterType="int">
+        SELECT content.`id`, content.`title`,content.`content`,content.`create_time`,`content`.`update_time`,`content`.`star`,`content`.`userId`,mode
+        FROM `content`
+                 JOIN `categories`
+                      ON `categories`.`id`=`content`.`categoriesId`
+        WHERE `content`.`userId`=#{userId}
+          AND type ='note'
+        AND `categories`.`id`=#{categoriesId}
+    </select>
+    <select id="queryNoteList" resultType="com.cyj.dto.content.ContentDto" parameterType="long">
+        SELECT  *
+        FROM `content`
+        WHERE
+            `content`.`categoriesId`=#{categoriesId}
+          AND
+            `content`.`deleted`=#{deleted}
+          AND type ='note'
+        ORDER BY  `content`.`update_time`   DESC
+    </select>
+    <update id="updateCategories" parameterType="long">
+        UPDATE  `content`
+        SET `content`.`categoriesId`=#{categoriesId}
+        WHERE `content`.`id`=#{id}
+    </update>
+    <update id="back2System" parameterType="long">
+        UPDATE  `content`
+        SET `content`.`deleted`=0
+        WHERE `content`.`id`=#{id}
+    </update>
+
+
+    <delete id="deleteFromRecycleBin" parameterType="long">
+        DELETE  FROM `content` WHERE `content`.`id`=#{id}
+    </delete>
+
+    <select id="queryStarNoteList" resultType="com.cyj.pojo.Content" parameterType="long">
+        SELECT  *
+        FROM `content`
+        WHERE
+            `content`.`deleted`=0
+          AND `content`.`star` =1
+          AND `content`.`userId`=#{userId}
+        AND type ='note'
+    </select>
+    <select id="queryAllContentListInRecycleBin" resultType="com.cyj.pojo.Content" parameterType="long">
+        select * from content
+        where userId=#{userId}
+          AND deleted=1
+          AND type ='note'
+    </select>
+
+    <delete id="deleteTemplate" parameterType="long">
+        DELETE  FROM `content` WHERE `content`.`id`=#{id}
+    </delete>
+
+    <select id="queryTemplate" resultType="com.cyj.dto.content.TemplateDto">
+        SELECT * FROM `content` WHERE  `content`.`userId`=#{userId} and type='template'
+    </select>
+    <select id="findTemplateById">
+        SELECT * FROM `content`
+        WHERE `content`.`id`=#{id}
+    </select>
+    <select id="findOnlyById" resultType="com.cyj.pojo.Content" parameterType="long">
+        SELECT * FROM `content`
+        WHERE id=#{userId}
+    </select>
+    <select id="findContentsByCategoriesId" resultType="com.cyj.pojo.Content" parameterType="string">
+        SELECT * FROM `content` WHERE `content`.`userId`=#{userId};
+    </select>
+    <select id="findNotesInRB" resultType="com.cyj.pojo.Content" parameterType="string">
+        SELECT * FROM `content` WHERE   userId=#{userId} and `content`.`deleted`=#{deleted}
+    </select>
+</mapper>
