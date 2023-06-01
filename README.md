@@ -11,7 +11,7 @@ With the increasing popularity of paperless learning and work methods, there is 
 
 ## Key Features
 
-![img](D:\Note\Note\大学笔记\大三\大三\大三下\比赛\云笔记系统\资料\软件比赛2\CloudNote\assets\wps1.jpg)
+<img width="413" alt="image" src="https://github.com/sonichen/CloudNote/assets/57282299/f33d6f8d-4da2-4c46-bc22-320e794c7d95">
 
 ### User Module
 
@@ -67,22 +67,17 @@ Users can view the complete history of note revisions, including content differe
 3. **Print Notes**: Users can print notes directly from the platform.
 
 ## Screenshots
+![image](https://github.com/sonichen/CloudNote/assets/57282299/b73d188b-e7ef-49f8-a0a1-c40e6f2fb91b)
+<img width="416" alt="image" src="https://github.com/sonichen/CloudNote/assets/57282299/1e64d093-ab6d-4cf6-b1ee-96db2ea20f8f">
+<img width="415" alt="image" src="https://github.com/sonichen/CloudNote/assets/57282299/4893e21e-e8f9-4faa-be0f-135d2dc39ea7">
+<img width="415" alt="image" src="https://github.com/sonichen/CloudNote/assets/57282299/987fbd64-6edb-4f9e-923e-c77ebcf0dc53">
+<img width="415" alt="image" src="https://github.com/sonichen/CloudNote/assets/57282299/71438abe-9ce7-4a1a-bb63-7e427f90e119">
+<img width="415" alt="image" src="https://github.com/sonichen/CloudNote/assets/57282299/52851933-9761-46fa-8b65-131bdad463f4">
+<img width="415" alt="image" src="https://github.com/sonichen/CloudNote/assets/57282299/c595ffbf-4d6f-4ca2-a684-90ea0e67caec">
+<img width="415" alt="image" src="https://github.com/sonichen/CloudNote/assets/57282299/158082f7-9b2c-47c3-9205-0d1110b8789c">
+<img width="416" alt="image" src="https://github.com/sonichen/CloudNote/assets/57282299/914228a8-07a8-423c-b650-1d35902eea7c">
 
-![image-20230601104943074](D:\Note\Note\大学笔记\大三\大三\大三下\比赛\云笔记系统\资料\软件比赛2\CloudNote\assets\image-20230601104943074.png)
 
-![img](D:\Note\Note\大学笔记\大三\大三\大三下\比赛\云笔记系统\资料\软件比赛2\CloudNote\assets\wps4.jpg)
-
-![img](D:\Note\Note\大学笔记\大三\大三\大三下\比赛\云笔记系统\资料\软件比赛2\CloudNote\assets\wps5.jpg)
-
-![img](D:\Note\Note\大学笔记\大三\大三\大三下\比赛\云笔记系统\资料\软件比赛2\CloudNote\assets\wps6.jpg)
-
-![img](D:\Note\Note\大学笔记\大三\大三\大三下\比赛\云笔记系统\资料\软件比赛2\CloudNote\assets\wps7.jpg)
-
-![img](D:\Note\Note\大学笔记\大三\大三\大三下\比赛\云笔记系统\资料\软件比赛2\CloudNote\assets\wps8.jpg)
-
-![img](D:\Note\Note\大学笔记\大三\大三\大三下\比赛\云笔记系统\资料\软件比赛2\CloudNote\assets\wps9.jpg)
-
-![img](D:\Note\Note\大学笔记\大三\大三\大三下\比赛\云笔记系统\资料\软件比赛2\CloudNote\assets\wps10.jpg)
 
 ## Innovative Features
 
